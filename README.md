@@ -11,8 +11,23 @@ A python script to create resigned ipa file from given ipa/app/xcarchive file.
 2.	Python 2.7 or later
 3.	Apple Distribution Certificate installed on the MacBook (created on developer.apple.com)
 4.	iOS App Provisioning Profile (created on developer.apple.com)
-5.	entitlements.plist (its template is attached)
+5.	entitlements.plist (its template is given bvelow)
 
+#####Template of entitlements.plist File
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>application-identifier</key>
+	<string>Y88DLQ42G7.com.company.appname</string>
+	<key>keychain-access-groups</key>
+	<array>
+		<string>Y88DLQ42G7.com.company.appname</string>
+	</array>
+</dict>
+</plist>
+```
 #####Preparation Steps:
 1.	Copy makeipa.py and provision profile files in a folder
 2.	Open makeipa.py for edit and update following lines:
